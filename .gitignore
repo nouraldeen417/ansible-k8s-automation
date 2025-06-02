@@ -1,0 +1,6 @@
+# Ignore Ansible log files globally
+**/ansible.log
+**/*.retry
+**/log/
+**/logs/
+**/*.log
