@@ -1,0 +1,329 @@
+2025-05-27 19:30:15,461 p=3096 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:30:15,553 p=3096 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:30:18,274 p=3096 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Warning: Permanently added '192.168.1.16' (ED25519) to the list of known hosts.\r\nPermission denied, please try again.", "unreachable": true}
+2025-05-27 19:30:18,287 p=3096 u=root n=ansible INFO| fatal: [server1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Warning: Permanently added '192.168.1.15' (ED25519) to the list of known hosts.\r\nPermission denied, please try again.", "unreachable": true}
+2025-05-27 19:30:18,287 p=3096 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:30:18,288 p=3096 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:30:18,288 p=3096 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:30:43,506 p=3205 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:30:43,529 p=3205 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:30:46,024 p=3205 u=root n=ansible INFO| fatal: [server1]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2025-05-27 19:30:46,032 p=3205 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2025-05-27 19:30:46,033 p=3205 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:30:46,033 p=3205 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:30:46,034 p=3205 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:31:05,809 p=3269 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:31:05,833 p=3269 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:31:07,185 p=3269 u=root n=ansible INFO| fatal: [server1]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:31:07,192 p=3269 u=root n=ansible INFO| fatal: [server2]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:31:07,193 p=3269 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:31:07,194 p=3269 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:31:07,194 p=3269 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:31:14,486 p=3373 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:31:14,508 p=3373 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:31:14,860 p=3373 u=root n=ansible INFO| fatal: [server1]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:31:14,860 p=3373 u=root n=ansible INFO| fatal: [server2]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:31:14,861 p=3373 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:31:14,862 p=3373 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:31:14,862 p=3373 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:32:31,242 p=3469 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:32:31,266 p=3469 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:32:32,890 p=3469 u=root n=ansible WARNING| [WARNING]: Platform linux on host server2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 19:32:32,891 p=3469 u=root n=ansible INFO| ok: [server2]
+2025-05-27 19:32:32,901 p=3469 u=root n=ansible WARNING| [WARNING]: Platform linux on host server1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 19:32:32,901 p=3469 u=root n=ansible INFO| ok: [server1]
+2025-05-27 19:32:32,903 p=3469 u=root n=ansible INFO| TASK [Create ansible user] *****************************************************************************************************************
+2025-05-27 19:32:33,955 p=3469 u=root n=ansible INFO| changed: [server2]
+2025-05-27 19:32:33,969 p=3469 u=root n=ansible INFO| changed: [server1]
+2025-05-27 19:32:33,973 p=3469 u=root n=ansible INFO| TASK [Set authorized key for ansible user] *************************************************************************************************
+2025-05-27 19:32:34,741 p=3469 u=root n=ansible INFO| changed: [server1]
+2025-05-27 19:32:34,765 p=3469 u=root n=ansible INFO| changed: [server2]
+2025-05-27 19:32:34,786 p=3469 u=root n=ansible INFO| TASK [Allow passwordless sudo for ansible user] ********************************************************************************************
+2025-05-27 19:32:35,895 p=3469 u=root n=ansible INFO| changed: [server2]
+2025-05-27 19:32:35,896 p=3469 u=root n=ansible INFO| changed: [server1]
+2025-05-27 19:32:35,898 p=3469 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:32:35,898 p=3469 u=root n=ansible INFO| server1                    : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:32:35,898 p=3469 u=root n=ansible INFO| server2                    : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:44:21,406 p=4166 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we
+got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading YAML.   did not find expected <document start>.
+did not find expected <document start>   in "<unicode string>", line 2, column 1  The error appears to be in '/root/ansible/hosts': line 2,
+column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [new_servers] server1
+ansible_host=192.168.1.15 ansible_user=nour ^ here
+
+2025-05-27 19:44:21,406 p=4166 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with ini plugin: /root/ansible/hosts:8: Expected key=value, got: @passwords.yml
+
+2025-05-27 19:44:21,406 p=4166 u=root n=ansible WARNING| [WARNING]: Unable to parse /root/ansible/hosts as an inventory source
+
+2025-05-27 19:44:21,406 p=4166 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-05-27 19:44:21,410 p=4166 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-05-27 19:44:21,511 p=4166 u=root n=ansible ERROR| ERROR! Attempting to decrypt but no vault secrets found
+2025-05-27 19:44:37,063 p=4201 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we
+got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading YAML.   did not find expected <document start>.
+did not find expected <document start>   in "<unicode string>", line 2, column 1  The error appears to be in '/root/ansible/hosts': line 2,
+column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [new_servers] server1
+ansible_host=192.168.1.15 ansible_user=nour ^ here
+
+2025-05-27 19:44:37,063 p=4201 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with ini plugin: /root/ansible/hosts:8: Expected key=value, got: @passwords.yml
+
+2025-05-27 19:44:37,064 p=4201 u=root n=ansible WARNING| [WARNING]: Unable to parse /root/ansible/hosts as an inventory source
+
+2025-05-27 19:44:37,064 p=4201 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-05-27 19:44:37,067 p=4201 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-05-27 19:44:37,201 p=4201 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:44:37,223 p=4201 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:44:37,348 p=4201 u=root n=ansible INFO| fatal: [server1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.15: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:44:37,352 p=4201 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.16: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:44:37,354 p=4201 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:44:37,355 p=4201 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:44:37,355 p=4201 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:45:54,323 p=4348 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we
+got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading YAML.   did not find expected <document start>.
+did not find expected <document start>   in "<unicode string>", line 2, column 1  The error appears to be in '/root/ansible/hosts': line 2,
+column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [new_servers] server1
+ansible_host=192.168.1.15 ansible_user=nour ^ here
+
+2025-05-27 19:45:54,323 p=4348 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with ini plugin: /root/ansible/hosts:8: Expected key=value, got: @passwords.yml
+
+2025-05-27 19:45:54,324 p=4348 u=root n=ansible WARNING| [WARNING]: Unable to parse /root/ansible/hosts as an inventory source
+
+2025-05-27 19:45:54,324 p=4348 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-05-27 19:45:54,327 p=4348 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-05-27 19:45:54,428 p=4348 u=root n=ansible ERROR| ERROR! Attempting to decrypt but no vault secrets found
+2025-05-27 19:46:03,749 p=4363 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we
+got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading YAML.   did not find expected <document start>.
+did not find expected <document start>   in "<unicode string>", line 2, column 1  The error appears to be in '/root/ansible/hosts': line 2,
+column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [new_servers] server1
+ansible_host=192.168.1.15 ansible_user=nour ^ here
+
+2025-05-27 19:46:03,749 p=4363 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with ini plugin: /root/ansible/hosts:8: Expected key=value, got: @passwords.yml
+
+2025-05-27 19:46:03,749 p=4363 u=root n=ansible WARNING| [WARNING]: Unable to parse /root/ansible/hosts as an inventory source
+
+2025-05-27 19:46:03,749 p=4363 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-05-27 19:46:03,754 p=4363 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-05-27 19:46:03,900 p=4363 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:46:03,922 p=4363 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:46:04,047 p=4363 u=root n=ansible INFO| fatal: [server1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.15: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:46:04,053 p=4363 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.16: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:46:04,054 p=4363 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:46:04,054 p=4363 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:46:04,056 p=4363 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:47:14,365 p=4426 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with yaml plugin: We were unable to read either as JSON nor YAML, these are the errors we
+got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading YAML.   did not find expected <document start>.
+did not find expected <document start>   in "<unicode string>", line 2, column 1  The error appears to be in '/root/ansible/hosts': line 2,
+column 1, but may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [new_servers] server1
+ansible_host=192.168.1.15 ansible_user=nour ^ here
+
+2025-05-27 19:47:14,366 p=4426 u=root n=ansible WARNING| [WARNING]:  * Failed to parse /root/ansible/hosts with ini plugin: /root/ansible/hosts:8: Expected key=value, got: @passwords.yml
+
+2025-05-27 19:47:14,366 p=4426 u=root n=ansible WARNING| [WARNING]: Unable to parse /root/ansible/hosts as an inventory source
+
+2025-05-27 19:47:14,366 p=4426 u=root n=ansible WARNING| [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-05-27 19:47:14,370 p=4426 u=root n=ansible WARNING| [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2025-05-27 19:47:14,512 p=4426 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:47:14,538 p=4426 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:47:15,427 p=4426 u=root n=ansible INFO| fatal: [server2]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:47:15,574 p=4426 u=root n=ansible INFO| fatal: [server1]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:47:15,575 p=4426 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:47:15,575 p=4426 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:47:15,575 p=4426 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:53:13,723 p=4554 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:53:13,747 p=4554 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:53:13,871 p=4554 u=root n=ansible INFO| fatal: [server1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.15: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:53:13,877 p=4554 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.16: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:53:13,880 p=4554 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:53:13,880 p=4554 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:53:13,880 p=4554 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:58:13,760 p=4886 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:58:13,783 p=4886 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:58:13,909 p=4886 u=root n=ansible INFO| fatal: [server1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.15: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:58:13,912 p=4886 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.16: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 19:58:13,913 p=4886 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:58:13,913 p=4886 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:58:13,913 p=4886 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:58:39,855 p=4935 u=root n=ansible ERROR| ERROR! Decryption failed (no vault secrets were found that could decrypt) on /root/ansible/passwords.yml
+2025-05-27 19:59:32,965 p=5052 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 19:59:32,989 p=5052 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 19:59:33,877 p=5052 u=root n=ansible INFO| fatal: [server1]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:59:33,882 p=5052 u=root n=ansible INFO| fatal: [server2]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 19:59:33,883 p=5052 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 19:59:33,883 p=5052 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 19:59:33,883 p=5052 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:00:08,477 p=5144 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:00:08,507 p=5144 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:00:08,846 p=5144 u=root n=ansible INFO| fatal: [server2]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 20:00:08,864 p=5144 u=root n=ansible INFO| fatal: [server1]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 20:00:08,865 p=5144 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:00:08,866 p=5144 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:00:08,866 p=5144 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:00:24,128 p=5231 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:00:24,153 p=5231 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:00:24,687 p=5231 u=root n=ansible INFO| fatal: [server2]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 20:00:24,691 p=5231 u=root n=ansible INFO| fatal: [server1]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 20:00:24,692 p=5231 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:00:24,692 p=5231 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:00:24,693 p=5231 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:01:14,209 p=5476 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:01:14,233 p=5476 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:01:14,553 p=5476 u=root n=ansible INFO| fatal: [server1]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 20:01:14,553 p=5476 u=root n=ansible INFO| fatal: [server2]: FAILED! => {"msg": "Missing sudo password"}
+2025-05-27 20:01:14,554 p=5476 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:01:14,554 p=5476 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:01:14,554 p=5476 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:01:45,562 p=5560 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:01:45,585 p=5560 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:01:46,073 p=5560 u=root n=ansible WARNING| [WARNING]: Platform linux on host server2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:01:46,073 p=5560 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:01:46,073 p=5560 u=root n=ansible WARNING| [WARNING]: Platform linux on host server1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:01:46,074 p=5560 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:01:46,075 p=5560 u=root n=ansible INFO| TASK [Create ansible user] *****************************************************************************************************************
+2025-05-27 20:01:46,990 p=5560 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:01:47,003 p=5560 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:01:47,005 p=5560 u=root n=ansible INFO| TASK [Set authorized key for ansible user] *************************************************************************************************
+2025-05-27 20:01:47,569 p=5560 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:01:47,581 p=5560 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:01:47,584 p=5560 u=root n=ansible INFO| TASK [Allow passwordless sudo for ansible user] ********************************************************************************************
+2025-05-27 20:01:49,547 p=5560 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:01:49,550 p=5560 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:01:49,552 p=5560 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:01:49,552 p=5560 u=root n=ansible INFO| server1                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:01:49,553 p=5560 u=root n=ansible INFO| server2                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:04:32,109 p=5791 u=root n=ansible WARNING| [WARNING]: Could not match supplied host pattern, ignoring: debug
+
+2025-05-27 20:04:32,110 p=5791 u=root n=ansible WARNING| [WARNING]: No hosts matched, nothing to do
+
+2025-05-27 20:05:58,341 p=5953 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:05:58,365 p=5953 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:05:58,492 p=5953 u=root n=ansible INFO| fatal: [server1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.15: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 20:05:58,496 p=5953 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: nour@192.168.1.16: Permission denied (publickey,password).", "unreachable": true}
+2025-05-27 20:05:58,497 p=5953 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:05:58,497 p=5953 u=root n=ansible INFO| server1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:05:58,498 p=5953 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:07:01,613 p=6059 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:07:01,636 p=6059 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:07:02,685 p=6059 u=root n=ansible WARNING| [WARNING]: Platform linux on host server2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:07:02,685 p=6059 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:07:02,687 p=6059 u=root n=ansible WARNING| [WARNING]: Platform linux on host server1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:07:02,687 p=6059 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:07:02,689 p=6059 u=root n=ansible INFO| TASK [Create ansible user] *****************************************************************************************************************
+2025-05-27 20:07:03,308 p=6059 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:07:03,312 p=6059 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:07:03,315 p=6059 u=root n=ansible INFO| TASK [Set authorized key for ansible user] *************************************************************************************************
+2025-05-27 20:07:03,916 p=6059 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:07:03,917 p=6059 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:07:03,919 p=6059 u=root n=ansible INFO| TASK [Allow passwordless sudo for ansible user] ********************************************************************************************
+2025-05-27 20:07:04,865 p=6059 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:07:04,866 p=6059 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:07:04,867 p=6059 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:07:04,867 p=6059 u=root n=ansible INFO| server1                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:07:04,867 p=6059 u=root n=ansible INFO| server2                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:08:39,451 p=6283 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:08:39,475 p=6283 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:08:40,461 p=6283 u=root n=ansible WARNING| [WARNING]: Platform linux on host server1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:08:40,462 p=6283 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:08:41,980 p=6283 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2025-05-27 20:08:41,982 p=6283 u=root n=ansible INFO| TASK [Create ansible user] *****************************************************************************************************************
+2025-05-27 20:08:42,476 p=6283 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:08:42,478 p=6283 u=root n=ansible INFO| TASK [Set authorized key for ansible user] *************************************************************************************************
+2025-05-27 20:08:42,980 p=6283 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:08:42,983 p=6283 u=root n=ansible INFO| TASK [Allow passwordless sudo for ansible user] ********************************************************************************************
+2025-05-27 20:08:43,801 p=6283 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:08:43,802 p=6283 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:08:43,802 p=6283 u=root n=ansible INFO| server1                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:08:43,803 p=6283 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:14:12,832 p=6625 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:14:12,856 p=6625 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:14:14,093 p=6625 u=root n=ansible WARNING| [WARNING]: Platform linux on host server1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:14:14,093 p=6625 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:14:14,125 p=6625 u=root n=ansible WARNING| [WARNING]: Platform linux on host server2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:14:14,126 p=6625 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:14:14,128 p=6625 u=root n=ansible INFO| TASK [Create ansible user] *****************************************************************************************************************
+2025-05-27 20:14:14,757 p=6625 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:14:14,799 p=6625 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:14:14,803 p=6625 u=root n=ansible INFO| TASK [Set authorized key for ansible user] *************************************************************************************************
+2025-05-27 20:14:15,474 p=6625 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:14:15,504 p=6625 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:14:15,508 p=6625 u=root n=ansible INFO| TASK [Allow passwordless sudo for ansible user] ********************************************************************************************
+2025-05-27 20:14:16,452 p=6625 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:14:16,485 p=6625 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:14:16,487 p=6625 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:14:16,487 p=6625 u=root n=ansible INFO| server1                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:14:16,487 p=6625 u=root n=ansible INFO| server2                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:16:39,118 p=6945 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:16:39,149 p=6945 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:16:40,578 p=6945 u=root n=ansible WARNING| [WARNING]: Platform linux on host server1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:16:40,579 p=6945 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:16:41,694 p=6945 u=root n=ansible INFO| fatal: [server2]: UNREACHABLE! => {"changed": false, "msg": "Invalid/incorrect password: Permission denied, please try again.", "unreachable": true}
+2025-05-27 20:16:41,707 p=6945 u=root n=ansible INFO| TASK [Create ansible user] *****************************************************************************************************************
+2025-05-27 20:16:42,432 p=6945 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:16:42,436 p=6945 u=root n=ansible INFO| TASK [Set authorized key for ansible user] *************************************************************************************************
+2025-05-27 20:16:43,199 p=6945 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:16:43,204 p=6945 u=root n=ansible INFO| TASK [Allow passwordless sudo for ansible user] ********************************************************************************************
+2025-05-27 20:16:44,380 p=6945 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:16:44,382 p=6945 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:16:44,382 p=6945 u=root n=ansible INFO| server1                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:16:44,382 p=6945 u=root n=ansible INFO| server2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:17:07,711 p=7125 u=root n=ansible INFO| PLAY [Initial server setup for Ansible] ****************************************************************************************************
+2025-05-27 20:17:07,807 p=7125 u=root n=ansible INFO| TASK [Check if we can connect using provided credentials] **********************************************************************************
+2025-05-27 20:17:09,337 p=7125 u=root n=ansible WARNING| [WARNING]: Platform linux on host server1 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:17:09,339 p=7125 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:17:10,685 p=7125 u=root n=ansible WARNING| [WARNING]: Platform linux on host server2 is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+
+2025-05-27 20:17:10,686 p=7125 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:17:10,695 p=7125 u=root n=ansible INFO| TASK [Create ansible user] *****************************************************************************************************************
+2025-05-27 20:17:12,330 p=7125 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:17:12,427 p=7125 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:17:12,433 p=7125 u=root n=ansible INFO| TASK [Set authorized key for ansible user] *************************************************************************************************
+2025-05-27 20:17:14,250 p=7125 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:17:14,302 p=7125 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:17:14,316 p=7125 u=root n=ansible INFO| TASK [Allow passwordless sudo for ansible user] ********************************************************************************************
+2025-05-27 20:17:16,996 p=7125 u=root n=ansible INFO| ok: [server1]
+2025-05-27 20:17:17,059 p=7125 u=root n=ansible INFO| ok: [server2]
+2025-05-27 20:17:17,066 p=7125 u=root n=ansible INFO| PLAY RECAP *********************************************************************************************************************************
+2025-05-27 20:17:17,067 p=7125 u=root n=ansible INFO| server1                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-05-27 20:17:17,068 p=7125 u=root n=ansible INFO| server2                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

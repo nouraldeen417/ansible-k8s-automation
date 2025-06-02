@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+# handlers file for roles/ha_proxy_lb
+- name: Restart service haproxy
+  ansible.builtin.service:
+    name: haproxy
+    state: restarted
+  

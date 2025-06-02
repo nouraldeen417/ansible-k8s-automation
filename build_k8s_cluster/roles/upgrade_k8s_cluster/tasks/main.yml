@@ -1,0 +1,58 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for roles/update_k8s_cluster
+- name: Run kubeadm version
+  shell: kubectl get node {{ inventory_hostname }} -o jsonpath='{.status.nodeInfo.kubeletVersion}' --kubeconfig /home/{{ ansible_user }}/.kube/config
+  register: kubeadm_output
+
+- name: debug kubeadm output
+  debug:
+    var: kubeadm_output.stdout
+
+- name: Fail if versions are already the same
+  meta: end_host
+  when: kubeadm_output.stdout == kubeadm_version
+
+- name: drain node before update
+  ansible.builtin.command: kubectl drain {{ inventory_hostname }} --ignore-daemonsets --kubeconfig /home/{{ ansible_user }}/.kube/config
+
+  
+
+- name: Overwrite entire file content
+  ansible.builtin.copy:
+    content: |
+            deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/{{ Updated_version }}/deb/ /
+    dest: /etc/apt/sources.list.d/kubernetes.list
+    mode: '0644'
+
+- name: unhold kubeadm properly
+  ansible.builtin.command: apt-mark unhold kubeadm kubectl kubelet
+  args:
+    creates: /etc/apt/held_kubeadm  # Makes it idempotent
+  changed_when: false  # Prevents false "changed" states
+
+- name: Update repositories cache and install "k8s" package
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    update_cache: yes
+  loop:
+    - "kubectl={{ package_version }} "
+    - "kubelet={{ package_version }} "
+    - "kubeadm={{ package_version }} "
+  notify: Restart service kubelet
+- name: Hold kubeadm properly
+  ansible.builtin.command: apt-mark hold kubeadm kubectl kubelet
+  args:
+    creates: /etc/apt/held_kubeadm  # Makes it idempotent
+  changed_when: false  # Prevents false "changed" states
+
+- name: update kubeadm
+  ansible.builtin.command: kubeadm upgrade apply {{ kubeadm_version }} --kubeconfig /home/{{ ansible_user }}/.kube/config  --yes
+  when: inventory_hostname == groups['super-master'][0]
+
+- name: update kubeadm
+  ansible.builtin.command: kubeadm upgrade node  --kubeconfig /home/{{ ansible_user }}/.kube/config
+  when: inventory_hostname in groups['master-nodes'] or inventory_hostname in groups['worker-nodes']
+
+- name: uncordon node after update
+  ansible.builtin.command: kubectl uncordon {{ inventory_hostname }} --kubeconfig /home/{{ ansible_user }}/.kube/config 

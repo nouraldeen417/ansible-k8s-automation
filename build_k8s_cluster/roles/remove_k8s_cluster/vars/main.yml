@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+# vars file for roles/remove_k8s_cluster
+kube_cluster_dirs:
+  - /etc/kubernetes
+  - "/home/{{ HOME_USER }}/.kube"
+  - /var/lib/kubelet
+  - /var/lib/etcd
